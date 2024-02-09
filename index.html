@@ -1,0 +1,67 @@
+<html>
+    <title>Attemps</title>
+    <style>
+        body{
+            background-color: green;
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+            border: 35px solid #b89961;
+            -webkit-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+        button{
+            border: none;
+            text-decoration: underline;
+            background-color: #b89961;
+            cursor: pointer;
+            font-size: 20;
+        }
+        .takeouts{
+            background-color: #b89961;
+            width: 100%;
+            height: 100;
+        }
+        .num{
+            background-color: #a08655;  
+            font-size: 70;
+            color: #8c754b;
+            cursor: not-allowed;
+        }
+        .cubularspinnyrandomdevice{
+            cursor: pointer;
+            background-color: white;
+            margin-top: 25%;
+            width: 60;
+            height: 60;
+            font-size: 55;
+        }
+    </style>
+    <script>
+        var attemps = 0;
+        function help(){
+            document.write('<title>Attemps | Help</title> <style>body{background-color: green; font-family: sans-serif; margin: 0; padding: 0; border: 35px solid #b89961; -webkit-user-select: none; -ms-user-select: none; user-select: none;} .takeouts{ background-color: #b89961; width: 100%; height: 100;} a{color: black;} h1{font-size: 70; color: #8c754b;}</style> <div class="takeouts"><center><h1>Help</h1></center></div>This is a 100% RNG based game just see how many attemps it takes. Just click anywere to roll. <a href="index.html">back</a> ');
+        }
+        function getdice(){
+            attemps += 1;
+            console.log(attemps);
+            var randomN = Math.floor(Math.random() * (9 - 1 + 0)) + 0;;
+            document.getElementById("numb").innerHTML = randomN;
+        }
+    </script>
+    <button onclick="help()" style="position: absolute; left: 2; top: 2; color: rgb(150, 114, 21);">Help</button>
+    <center>
+    <div class="takeouts">
+            <span class="num">0</span>
+            <span class="num">1</span>
+            <span class="num">2</span>
+            <span class="num">3</span>
+            <span class="num">4</span>
+            <span class="num">5</span>
+            <span class="num">6</span>
+            <span class="num">7</span>
+    </div>
+    <div onclick="getdice()" class="cubularspinnyrandomdevice"><p id="numb">0</p></div>
+    </center>
+</html>
